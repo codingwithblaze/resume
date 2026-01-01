@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BM Excel Blaze - AI & Data Science Professional Portfolio and Interactive Resume. Explore projects in YOLO object detection, machine learning, and certifications.">
+    <meta name="keywords" content="BM Excel Blaze, AI, Data Science, Portfolio, Resume, YOLOv7-Tiny, Machine Learning, Python, Developer, Resume HTML">
+    <meta name="author" content="BM Excel Blaze">
+    <title>BM Excel Blaze | AI & Data Science Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Decorative background elements -->
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+    <div class="bg-glow blob-3"></div>
+
+    <!-- Floating Actions Panel -->
+    <div class="floating-controls">
+        <button id="theme-toggle" class="btn-control" title="Toggle Light/Dark Mode" aria-label="Toggle Light/Dark Mode">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41/></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <button id="print-btn" class="btn-control" title="Print or Save PDF" aria-label="Print or Save PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+            <span>Save PDF</span>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        <!-- Sidebar Column -->
+        <aside class="sidebar">
+            <div class="glass-card profile-card">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar-initials">EB</div>
+                    <div class="status-indicator"></div>
+                </div>
+                <h1 class="profile-name">BM EXCEL BLAZE</h1>
+                <p class="profile-title">AI & Data Science Professional</p>
+                <p class="profile-location">
+                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Hyderabad, India
+                </p>
+                
+                <hr class="divider">
+                
+                <!-- Contact Links -->
+                <div class="contact-links">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <div class="contact-value-wrapper">
+                            <a href="mailto:blazeexcel314@gmail.com" class="contact-link">blazeexcel314@gmail.com</a>
+                            <button class="copy-btn" data-copy="blazeexcel314@gmail.com" title="Copy email">
+                                <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <div class="contact-value-wrapper">
+                            <a href="tel:+917337088987" class="contact-link">+91 7337088987</a>
+                            <button class="copy-btn" data-copy="+917337088987" title="Copy phone number">
+                                <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Social Connects</span>
+                        <div class="social-grid">
+                            <a href="https://www.linkedin.com/in/excel-blaze-4705a63b6/" target="_blank" class="social-badge linkedin" rel="noopener noreferrer">
+                                <svg class="icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/codingwithblaze" target="_blank" class="social-badge github" rel="noopener noreferrer">
+                                <svg class="icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strengths section -->
+            <div class="glass-card content-sidebar-card">
+                <h3 class="sidebar-title">Core Strengths</h3>
+                <div class="strengths-container">
+                    <div class="strength-pill">
+                        <span class="strength-bullet"></span> Quick Learner
+                    </div>
+                    <div class="strength-pill">
+                        <span class="strength-bullet"></span> Communication Skills
+                    </div>
+                    <div class="strength-pill">
+                        <span class="strength-bullet"></span> Teamwork & Collaboration
+                    </div>
+                    <div class="strength-pill">
+                        <span class="strength-bullet"></span> Problem Solving
+                    </div>
+                    <div class="strength-pill">
+                        <span class="strength-bullet"></span> Leadership
+                    </div>
+                    <div class="strength-pill">
+                        <span class="strength-bullet"></span> Adaptability
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies & Interests section -->
+            <div class="glass-card content-sidebar-card">
+                <h3 class="sidebar-title">Hobbies & Interests</h3>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <span class="hobby-icon">🥊</span>
+                        <span class="hobby-text">Boxing</span>
+                    </div>
+                    <div class="hobby-item">
+                        <span class="hobby-icon">⚽</span>
+                        <span class="hobby-text">Football</span>
+                    </div>
+                    <div class="hobby-item">
+                        <span class="hobby-icon">♟️</span>
+                        <span class="hobby-text">Chess</span>
+                    </div>
+                    <div class="hobby-item">
+                        <span class="hobby-icon">🗣️</span>
+                        <span class="hobby-text">Languages</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Column -->
+        <main class="main-content">
+            <!-- Professional Summary -->
+            <section class="glass-card section-card fade-in">
+                <h2 class="section-title">
+                    <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Professional Summary
+                </h2>
+                <p class="summary-text">
+                    Highly motivated <strong>AI & Data Science undergraduate</strong> with strong communication, teamwork, and technical problem-solving capabilities. Experienced in developing Machine Learning models, Computer Vision frameworks, and performing predictive data analysis using Python. Demonstrates rapid adaptability in fast-paced business and client-focused environments. Eager to leverage a background encompassing a <strong>6-month hands-on AI & Data Science internship</strong> and multiple certifications into roles bridging technology, business development, client relations, and technology-driven operations.
+                </p>
+            </section>
+
+            <!-- Skills Showcase with Interactive Filtering -->
+            <section class="glass-card section-card fade-in">
+                <div class="section-header-row">
+                    <h2 class="section-title">
+                        <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.886H3.886L8.8 12.518l-1.913 5.886L12 14.797l4.913 3.607-1.913-5.886 4.914-3.632h-6.202L12 3Z"/></svg>
+                        Skills Matrix
+                    </h2>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="technical">Technical</button>
+                        <button class="filter-btn" data-filter="professional">Professional</button>
+                    </div>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Technical Skills Group -->
+                    <div class="skill-category-group" data-skill-type="technical">
+                        <h3 class="skill-group-label">Technical Competencies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Machine Learning</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Deep Learning & CV</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Data Analysis (Pandas, NumPy)</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Scikit-Learn</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Git & Git Version Control</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Excel & Jupyter</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Basic R Programming</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional Skills Group -->
+                    <div class="skill-category-group" data-skill-type="professional">
+                        <h3 class="skill-group-label">Professional & Business Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <span class="skill-name">Business Development</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Client Interaction & Relations</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Communication & Pitching</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Lead Generation</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Strategic Thinking</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-name">Team Collaboration</span>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Showcase -->
+            <section class="glass-card section-card fade-in">
+                <h2 class="section-title">
+                    <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    Featured Projects
+                </h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">SeaTreasure Target Detection</h3>
+                            <span class="project-tag">YOLOv7-Tiny</span>
+                        </div>
+                        <p class="project-desc">
+                            Developed an underwater object detection model utilizing the YOLOv7-Tiny architecture to accurately localize and classify subsea resources and treasures under poor visibility.
+                        </p>
+                        <ul class="project-bullets">
+                            <li>Enhanced detection recall using specialized image preprocessing filters.</li>
+                            <li>Engineered custom anchors to align with underwater targets.</li>
+                            <li>Compiled reports and led code walk-throughs for team reviews.</li>
+                        </ul>
+                        <div class="project-tech-badges">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Computer Vision</span>
+                            <span class="tech-badge">Deep Learning</span>
+                            <span class="tech-badge">PyTorch</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-name">Fake News Classification System</h3>
+                            <span class="project-tag">Machine Learning</span>
+                        </div>
+                        <p class="project-desc">
+                            Designed a high-accuracy Natural Language Processing classification system to analyze, process, and separate fake news articles from real publications.
+                        </p>
+                        <ul class="project-bullets">
+                            <li>Implemented TF-IDF text vectorizers for precise semantic extraction.</li>
+                            <li>Trained and benchmarked Logistic Regression, Naive Bayes, and Random Forests.</li>
+                            <li>Cleaned unstructured datasets with NLTK tokenization and stopword removal.</li>
+                        </ul>
+                        <div class="project-tech-badges">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">NLTK</span>
+                            <span class="tech-badge">NLP</span>
+                            <span class="tech-badge">Scikit-Learn</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Timeline -->
+            <section class="glass-card section-card fade-in">
+                <h2 class="section-title">
+                    <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    Work Experience
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-duration">Nov 2024 – May 2025</span>
+                            <h3 class="timeline-role">Artificial Intelligence & Data Science Intern</h3>
+                            <span class="timeline-org">InternCourse</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="timeline-desc">
+                                Actively contributed to the lifecycle of machine learning and predictive data analytics projects, transforming raw business requirements into functioning algorithms.
+                            </p>
+                            <ul class="timeline-bullets">
+                                <li>Executed robust exploratory data analysis (EDA), generating visualizations that pinpointed key data skewness.</li>
+                                <li>Collaborated directly with cross-functional teams in agile sprints, delivering project updates and final presentations.</li>
+                                <li>Refined business communication and technical articulation during client-facing sync meetings.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Timeline -->
+            <section class="glass-card section-card fade-in">
+                <h2 class="section-title">
+                    <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                    Education
+                </h2>
+                <div class="timeline">
+                    <!-- B.Tech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-duration">2022 – 2026</span>
+                            <h3 class="timeline-role">B.Tech in Artificial Intelligence & Data Science</h3>
+                            <span class="timeline-org">Sri Indu College of Engineering and Technology</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="education-metrics"><strong>Academic Performance:</strong> CGPA 7.3</p>
+                            <p class="education-details">In-depth coursework in Artificial Intelligence systems, Database Management Systems, Advanced Machine Learning, Probability, and Algorithm Design.</p>
+                        </div>
+                    </div>
+                    <!-- Intermediate -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-duration">2019 – 2021</span>
+                            <h3 class="timeline-role">Intermediate (MPC - Mathematics, Physics, Chemistry)</h3>
+                            <span class="timeline-org">Sri Chaitanya Junior College</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="education-metrics"><strong>Academic Performance:</strong> 85% Score</p>
+                        </div>
+                    </div>
+                    <!-- SSC -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <span class="timeline-duration">2018 – 2019</span>
+                            <h3 class="timeline-role">Secondary School Certificate (SSC)</h3>
+                            <span class="timeline-org">Board of Secondary Education</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="education-metrics"><strong>Academic Performance:</strong> CGPA 8.5</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="glass-card section-card fade-in">
+                <h2 class="section-title">
+                    <svg class="title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Certifications
+                </h2>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4 class="cert-title">100 Days of Code: Python</h4>
+                            <p class="cert-issuer">Udemy</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4 class="cert-title">Complete Data Science Bootcamp 2025</h4>
+                            <p class="cert-issuer">Udemy</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4 class="cert-title">Machine Learning A-Z: AI, Python & R</h4>
+                            <p class="cert-issuer">Udemy</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4 class="cert-title">Data Structures & Algorithms Training</h4>
+                            <p class="cert-issuer">ExcelR</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4 class="cert-title">Python Programming Certification</h4>
+                            <p class="cert-issuer">Naresh Technologies</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4 class="cert-title">Microsoft AI Innovators Hub Participation</h4>
+                            <p class="cert-issuer">Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification Toast System -->
+    <div id="toast" class="toast-notification" aria-live="polite">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
