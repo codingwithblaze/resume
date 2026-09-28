@@ -371,7 +371,7 @@ Score each subject out of 40 (+4 correct, −1 wrong, 0 blank).
 **Also note:**
 
 - Your **strongest subject** is the one with the highest score *per minute*, not just the highest score.
-- If you didn't finish in 60 minutes, you have a **speed gap**: add a daily Speed Drill (page [[speed-manual]]).
+- If you didn't finish in 60 minutes, you have a **speed gap**: add the daily calculation drill (page [[speed-drills]]).
 - Two or more wrong answers in a subject *where you felt confident* means an **accuracy gap**: start the Mistake Book routine immediately.
 
 ## Syllabus self-audit {#self-audit}

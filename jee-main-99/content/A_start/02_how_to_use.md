@@ -40,6 +40,22 @@ Timed test material and instructions: sit it like the real exam.
 Rules where a mistake costs you directly, such as negative marking or exam-day regulations.
 :::
 
+:::fact Verified Fact
+Information taken from an official document (NTA, NCERT, JoSAA). Re-check it against the 2027 bulletin.
+:::
+
+:::ref Reference
+Textbook reference data, such as reagent tables, trends and tests, collected for quick lookup.
+:::
+
+:::data Third-Party Data
+Numbers from coaching or portal analyses, such as marks-vs-percentile ranges. Approximate by nature.
+:::
+
+:::strategy Strategy
+A method or routine this book recommends: how to study, attempt or review.
+:::
+
 ## Three kinds of statement, three labels
 
 | Label | Meaning | Example |

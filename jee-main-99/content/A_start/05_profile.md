@@ -26,8 +26,8 @@ Where you leave a field blank, the plans in this book use the assumption shown. 
 
 | If your profile says… | Then adjust like this | Go to |
 |---|---|---|
-| Level = **Beginner** | Use the next-longer plan if possible. Phase 1 is +25% time; start every chapter with its "Core theory" and Basic questions only | Plan Selector, page [[plan-selector]] |
-| Level = **Advanced** | Skim Core theory; start at the PYQ Pattern box; do only M/H practice questions; mocks begin 4 weeks earlier | Mock system, page [[mock-system]] |
+| Level = **Beginner** | Use the next-longer plan if possible. Phase 1 is +25% time; start every chapter with its "Core concepts" and Basic questions only | Plan Selector, page [[plan-selector]] |
+| Level = **Advanced** | Skim Core concepts; start at the PYQ Pattern box; do only M/H practice questions; mocks begin 4 weeks earlier | Mock system, page [[mock-system]] |
 | Weakest = **Maths** | Scenario D; 40% of daily problem-solving time to Maths; drill the Must-do models first | page [[percentile-strategy]], [[maths-strategy]] |
 | Weakest = **Physics** | Scenario E; formula-first approach; daily 20-min "direct formula" drill | page [[physics-strategy]] |
 | Weakest = **Chemistry** | Scenario F; NCERT reading block every day; Inorganic flash-review nightly | page [[chem-strategy]] |

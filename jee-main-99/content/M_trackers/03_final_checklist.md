@@ -16,7 +16,7 @@ Work through this list in the last 14 days. Every item should be ticked before e
 +++
 **Exam readiness**
 
-[ ] At least 8 full mocks analysed with the Mock Analysis Sheet
+[ ] At least 15 full mocks analysed with the Mock Analysis Sheet (target: 20, page [[roadmap]])
 [ ] Last 5 mocks: in the target band, with ≤ 8 negative marks
 [ ] Subject order and checkpoints tested in ≥ 5 mocks and fixed
 [ ] Round system and 3-minute rule used without thinking

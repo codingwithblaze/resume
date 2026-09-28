@@ -2,7 +2,7 @@
 
 This book is a working system, not a reading book. Every page is here for one job: moving your JEE Main 2027 score up by the next few marks, again and again, until you are at the level where 99+ percentile becomes a realistic outcome.
 
-It combines five things that are usually sold separately:
+It combines six things that are usually sold separately:
 
 :::grid3
 **1 · A coaching module set**
@@ -15,7 +15,7 @@ Every formula, constant, reaction, reagent and NCERT fact you need, compressed f
 Question selection, answer-choice techniques, speed methods, exam-hall timing and negative-marking control, built from verified exam rules.
 +++
 **4 · A mock-test companion**
-A full-length original mock test, subject mini-tests, a mock-analysis sheet and a percentile-planning section based on historical data.
+A full-length original mock test, a 60-question bank in six skill sets, a chapter test in every module, a mock-analysis sheet and a percentile-planning section based on historical data.
 +++
 **5 · A personal planner**
 30- to 180-day plans at 6, 8 and 10 hours a day, final 30/14/7/3-day plans, timetables, weekly scorecards and printable trackers.
