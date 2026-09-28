@@ -5,7 +5,9 @@ syntax documented in content/SYNTAX.md.
 """
 from __future__ import annotations
 
+import hashlib
 import html
+import random
 import re
 from dataclasses import dataclass, field
 
@@ -79,6 +81,7 @@ class Ctx:
     cb_counter: int = 0
     slug_counter: int = 0
     all_questions: list[Question] = field(default_factory=list)
+    ans_counts: dict = field(default_factory=lambda: {k: 0 for k in "ABCD"})
 
 
 # ---------------------------------------------------------------- inline tokens
@@ -263,6 +266,37 @@ def parse_question(header: str, lines: list[str]) -> Question:
                     short="\n".join(fields["short"]).strip(), trap="\n".join(fields["trap"]).strip())
 
 
+# Hand-written MCQs drift toward (B). Spread keys evenly across A-D by swapping
+# the correct option into a target slot (chosen per chapter, weighted toward
+# the least-used letters) and remapping "(X)" references in sol/short/trap.
+_POSITIONAL = re.compile(r"of the above|\([A-D]\)|\b[A-D] and [A-D]\b|\bA and R\b", re.I)
+_LETTER_REF = re.compile(r"(?<![A-Za-z0-9\\_^])\(([A-D])\)")
+
+
+def balance_answer(q: Question, ctx: Ctx) -> None:
+    letters = [o[0] for o in q.options]
+    if letters != list("ABCD") or q.ans not in "ABCD" or len(q.ans) != 1:
+        return
+    if any(_POSITIONAL.search(t) for _, t in q.options):
+        ctx.ans_counts[q.ans] += 1
+        return
+    rng = random.Random(int(hashlib.md5(q.qid.encode()).hexdigest(), 16))
+    counts = ctx.ans_counts
+    weights = [1.0 / (1 + counts[k]) ** 3 for k in "ABCD"]
+    target = rng.choices("ABCD", weights=weights)[0]
+    counts[target] += 1
+    src = q.ans
+    if target == src:
+        return
+    texts = dict(q.options)
+    texts[src], texts[target] = texts[target], texts[src]
+    q.options = [(k, texts[k]) for k in "ABCD"]
+    swap = {src: target, target: src}
+    fix = lambda s: _LETTER_REF.sub(lambda m: f"({swap.get(m.group(1), m.group(1))})", s)
+    q.sol, q.short, q.trap = fix(q.sol), fix(q.short), fix(q.trap)
+    q.ans = target
+
+
 def _opt_layout(options) -> str:
     def mlen(tex):
         t = re.sub(r"\\ce\{(.*)\}", r"\1", tex)
@@ -387,6 +421,7 @@ def render_block(text: str, ctx: Ctx) -> str:
                 body.append(lines[i])
                 i += 1
             q = parse_question(header, body)
+            balance_answer(q, ctx)
             if not ctx.sets:
                 ctx.sets.append(("Questions", []))
                 ctx.pending.append(ctx.sets[-1])
