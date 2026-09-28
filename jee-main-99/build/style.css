@@ -367,7 +367,7 @@ a.pref { color: var(--accent); font-weight: 700; border-bottom: 0.5pt dotted cur
 
 /* sources: keep codes on one line; show external links */
 .ch-sources td:first-child { white-space: nowrap; font-family: var(--mono); font-size: 7.4pt; }
-.ch-sources a[href^="http"] { color: #2c5aa0; text-decoration: none; border-bottom: 0.5pt solid #b8c6e3; }
+.ch-sources td a[href^="http"] { color: #2c5aa0; text-decoration: none; border-bottom: 0.5pt solid #b8c6e3; }
 
 /* compact form tables (analysis sheets) */
 .dense td, .dense th { padding: 0.7pt 4pt; }
