@@ -30,6 +30,8 @@ Write the hours studied each day (blocks × block length). Month {{field:hr-mont
 | Hours | {{blank:9}} | {{blank:9}} | {{blank:9}} | {{blank:9}} | {{blank:9}} | {{blank:9}} | {{blank:9}} | {{blank:9}} | {{blank:9}} | | {{blank:9}} |
 :::
 
+@@PAGEBREAK
+
 ## Chapter Completion Tracker {#tr-chapters}
 
 Tick each stage; write the practice-set and chapter-test percentages.

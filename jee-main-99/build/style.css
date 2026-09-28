@@ -365,6 +365,10 @@ a.pref { color: var(--accent); font-weight: 700; border-bottom: 0.5pt dotted cur
 .ch-command-sheet .ch-title, .ch-lm-physics .ch-title, .ch-lm-chemistry .ch-title, .ch-lm-reactions .ch-title, .ch-lm-maths .ch-title,
 .ch-lm-shortcuts .ch-title, .ch-lm-mistakes .ch-title, .ch-lm-strategy .ch-title { font-size: 19pt; }
 
+/* sources: keep codes on one line; show external links */
+.ch-sources td:first-child { white-space: nowrap; font-family: var(--mono); font-size: 7.4pt; }
+.ch-sources a[href^="http"] { color: #2c5aa0; text-decoration: none; border-bottom: 0.5pt solid #b8c6e3; }
+
 /* compact form tables (analysis sheets) */
 .dense td, .dense th { padding: 0.7pt 4pt; }
 .dense a.fld { height: 4.3mm; }

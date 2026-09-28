@@ -33,6 +33,8 @@ They are still useful for Physics and Maths practice, but skip questions on topi
 4. **Would I get a variant right?** Change one number or condition and re-solve it in your head.
 :::
 
+@@PAGEBREAK
+
 ## Shift-wise tracker (2024–2026 papers)
 
 Tick a shift once you have attempted it as a timed full paper, and write your score. Dates are as reported for Paper 1 (B.E./B.Tech.) {{tag:third}} [R-DATES24], [R-DATES25], [R-DATES26]. A dash marks a slot with no Paper-1 shift (8 April 2025 had only the afternoon shift).

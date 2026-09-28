@@ -1,7 +1,5 @@
 # Exam Day Command Sheet {#command-sheet}
 
-<div class="sheet">
-
 :::grid2
 **BEFORE THE EXAM**
 
@@ -53,5 +51,3 @@ Pen down → 5 slow breaths → read only the last line of the next question →
 2. {{field:cs-trap2:150}}
 3. {{field:cs-trap3:150}}
 :::
-
-</div>

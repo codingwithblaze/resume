@@ -41,6 +41,8 @@ One line per full-length mock. The trend matters more than any single score: jud
 
 </div>
 
+@@PAGEBREAK
+
 ## Score trend
 
 Plot each mock's total and join the points. Draw your **target band** (page [[percentile-strategy]]) as two horizontal lines in a different colour. Three points in a row inside the band show that the level is stable.
