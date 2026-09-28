@@ -4,7 +4,7 @@ Fill this in on Day 1, in pen or directly in the PDF (the fields are fillable). 
 
 | Field | Your details | If unknown, this book assumes… |
 |---|---|---|
-| Student name | **Gayathri Devu** | — |
+| Student name | {{field:name:60}} | — |
 | Current class / year | {{field:class:60}} | Class 12 in 2026–27, or a Class 12 pass-out taking a drop year |
 | Current preparation level | {{field:level:60}} (Beginner / Intermediate / Advanced) | **Intermediate**: Class 11 done once, Class 12 partially done |
 | Target percentile | **99+** | — |

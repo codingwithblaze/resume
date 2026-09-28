@@ -42,6 +42,9 @@ def assemble(parts, cover_label, cover_desc, with_cover=True, with_toc=True, wit
     if with_cover:
         body.append(book.cover_html(cover_label, cover_desc))
         marks.append((1, "Cover", "full-cover"))
+        body.append(book.front_matter_html(cover_label))
+        marks.append((1, "Title page", "full-titlepage"))
+        marks.append((1, "Copyright & disclaimer", "full-copyright"))
     all_ch = [c for p in parts for c in p[4]]
     if with_toc:
         toc_ch = book.Chapter("contents", toc_title, "general", "", "", "", "", [], [])
@@ -67,13 +70,17 @@ def assemble(parts, cover_label, cover_desc, with_cover=True, with_toc=True, wit
             for hl, hid, htitle in c.headings:
                 if hl == 2:
                     marks.append((level + 1, htitle, hid))
+    if with_cover:
+        body.append(book.back_cover_html())
+        marks.append((1, "Back cover", "full-backcover"))
     return "".join(body), chapters, marks
 
 
 DELIVERABLES = {
-    "A": dict(file="A_JEE_Main_99_Master_Book.pdf", label="Master Book",
-              desc="Strategy · Physics · Chemistry · Maths · Formulas · PYQs · Mocks · Plans · Trackers",
-              parts=lambda: book.MASTER_PARTS, doc_label="MASTER BOOK", tabs=None),
+    # The all-in-one book. B–E are optional extracts (python3 build.py B C D E); they are not built by default.
+    "A": dict(file="JEE_Main_99_Complete_Edition.pdf", label="Complete Edition",
+              desc="All-in-one: strategy, 54 chapter modules, formulas, PYQs, mocks, plans and trackers",
+              parts=lambda: book.MASTER_PARTS, doc_label="COMPLETE EDITION", tabs=None),
     "B": dict(file="B_Quick_Revision_Book.pdf", label="Quick Revision Book",
               desc="Formula handbook · Speed & shortcut manual · Last-minute sheets",
               parts=lambda: [part_by_roman("V"), part_by_roman("VI"), part_by_roman("XII")], doc_label="QUICK REVISION",
@@ -102,7 +109,7 @@ def build(key):
     t0 = time.time()
     print(f"[{key}] {d['file']}")
     parts = make_parts(d["parts"]())
-    intro = "" if key == "A" else "Page numbers marked <b>MB</b> refer to the Master Book, where the full chapter is."
+    intro = "" if key == "A" else "Page numbers marked <b>MB</b> refer to the Complete Edition, where the full chapter is."
     body, chapters, marks = assemble(parts, d["label"], d["desc"], with_cover=d.get("cover", True),
                                      with_toc=d.get("toc", True), with_dividers=d.get("dividers", True), toc_intro=intro)
     os.makedirs(OUT, exist_ok=True)
@@ -121,7 +128,7 @@ def build(key):
 
 
 if __name__ == "__main__":
-    keys = [a for a in sys.argv[1:] if a in DELIVERABLES] or list(DELIVERABLES)
-    keys.sort(key=lambda k: k != "A")  # the Master Book first, so "MB" page refs are current
+    keys = [a for a in sys.argv[1:] if a in DELIVERABLES] or ["A"]
+    keys.sort(key=lambda k: k != "A")  # the complete book first, so "MB" page refs in extracts are current
     for k in keys:
         build(k)

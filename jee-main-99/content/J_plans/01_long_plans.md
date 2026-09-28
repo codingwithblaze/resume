@@ -119,8 +119,8 @@ Board exams usually fall between Session 1 and Session 2. During board weeks, sw
 
 # The 120-Day Plan {#plan-120}
 
-:::note Personalised for Gayathri
-Starting **Monday 28 September 2026** as **Day 5**. The Day 1–4 tasks (profile, diagnostic, set-up) fit into the first weekend, 3–4 October. Day 120 is **21 January 2027**, the eve of the first Session 1 exam day (22 January, NTA tentative calendar [NTA-CAL27]). **If your allotted shift is later, add the extra days to Phase 3.**
+:::note Calendar dates for JEE Main 2027 Session 1
+The dates in the tables assume you start on **Monday 28 September 2026** as **Day 5**, with the Day 1–4 tasks (profile, diagnostic, set-up) fitted into the first weekend, 3–4 October. Day 120 is then **21 January 2027**, the eve of the first Session 1 exam day (22 January, NTA tentative calendar [NTA-CAL27]). **Starting on another date?** Use the week numbers and ignore the dates. **If your allotted shift is later than 22 January**, add the extra days to Phase 3.
 :::
 
 **Phases:** 0 · Diagnose (Days 1–4) → 1 · Build (Days 5–67) → 2 · Strengthen (Days 68–95) → 3 · Mock & Fix (Days 96–106) → 4 · Peak (Days 107–120).

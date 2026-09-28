@@ -88,9 +88,10 @@ A method or routine this book recommends: how to study, attempt or review.
 +++
 **On paper**
 
-- Print the **Study Planner** and **Mock Analysis Template** PDFs separately; they're designed for A4 printing.
-- Print the **Quick Revision Book** double-sided and keep it in your bag.
-- The **Exam Day Command Sheet** is a single page. Print two copies: one for your desk, one for exam morning.
+- Everything is designed for A4. Print only the pages you need, when you need them.
+- **Planner pages** (Part X), **trackers** (Part XIII) and the two-page **Mock Analysis Sheet** (page [[mock-analysis-sheet]]): print one set, or one per mock.
+- **Revision pages:** print the Formula Handbook (Part V) and the Last-Minute sheets (Part XII) double-sided and keep them in your bag.
+- The **Exam Day Command Sheet** (page [[command-sheet]]) is a single page. Print two copies: one for your desk, one for exam morning.
 - Chapter modules print well in grayscale: every box also has a text label.
 :::
 

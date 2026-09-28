@@ -88,14 +88,14 @@ $$\text{Percentile} = \frac{100 \times \text{number of candidates in that shift 
 | 75% criterion (for NIT/IIIT/CFTI admission via JoSAA) | 75% aggregate in Class 12 (65% for SC/ST), **or** top-20 percentile of your board | {{tag:verified}} 2026 bulletin / JoSAA |
 | JEE Advanced qualifying cut-off (General) | 2026: 93.4123549 · 2025: 93.1023262 · 2024: 93.2362181 · 2023: 90.7788642 | {{tag:verified}} as reported [R-CUTOFF] |
 
-## Facts that matter specifically for you
+## Fees, seat pools and exam-day rules
 
 :::grid2
 **Female-only seat pool (JoSAA)** {{tag:verified}}
-In JoSAA counselling, IITs and the NIT+ system institutes run a *Female-only (including supernumerary)* pool alongside the *Gender-neutral* pool. The supernumerary seats exist to raise female enrolment to at least about 20%. A female candidate is considered for **both** pools, so the ranks you need can be meaningfully different from gender-neutral closing ranks. Check the official JoSAA past opening/closing ranks for your target branches. [JOSAA]
+In JoSAA counselling, IITs and the NIT+ system institutes run a *Female-only (including supernumerary)* pool alongside the *Gender-neutral* pool. The supernumerary seats exist to raise female enrolment to at least about 20%. A female candidate is considered for **both** pools, so the ranks she needs can be meaningfully different from gender-neutral closing ranks. Check the official JoSAA past opening/closing ranks for your target branches. [JOSAA]
 +++
 **Application fee** {{tag:verified}} (2026 bulletin, reported [R-FEE])
-For one paper at an Indian centre, the fee was **₹800 for female candidates of all categories**, against ₹1,000 for General-category male candidates. Check the 2027 bulletin for the current figure.
+For one paper at an Indian centre in 2026: **₹1,000** General (male) · **₹900** Gen-EWS/OBC-NCL (male) · **₹800** female candidates of all categories · **₹500** SC/ST/PwD/third gender. Check the 2027 bulletin for current figures.
 :::
 
 :::grid2
@@ -104,7 +104,7 @@ Report early: in 2026, gates closed 30 minutes before the exam started. Carry yo
 +++
 **Practical planning** {{tag:rec}}
 - Visit or map your centre route 1–2 days before. Plan to travel with a family member for early-morning shifts.
-- If your exam dates may coincide with your period, plan comfort and medication with your doctor in advance, and take at least two full mocks at the same time of day to rehearse. Check the admit card for permitted items.
+- Female candidates: if the exam dates may coincide with your period, plan comfort and medication with your doctor in advance, and take at least two full mocks at the same time of day to rehearse. Check the admit card for permitted items.
 - Keep the exam-morning routine (page [[exam-day-plan]]) identical to your mock-day routine.
 :::
 

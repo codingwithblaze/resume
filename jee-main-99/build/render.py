@@ -43,7 +43,7 @@ def page_rules(chapters, doc_label, tabs_list=None) -> str:
             right = right[:68] + "…"
         rules.append(f"section.ch-{ch.cid} {{ page: pg-{ch.cid}; }}")
         rules.append(f"@page pg-{ch.cid} {{ " + base % (_css_str(left), _css_str(right), colour,
-                                                       _css_str("Prepared for " + book.PREPARED_FOR),
+                                                       _css_str(f"© {book.YEAR} {book.AUTHOR}"),
                                                        _css_str(tabs), colour) + " }")
     return "\n".join(rules)
 
@@ -278,9 +278,9 @@ def postprocess(src, dst, chapters, pages, bookmarks, title, meta_subject, log=p
         prev = lvl
     if fixed:
         doc.set_toc(fixed)
-    doc.set_metadata({"title": title, "author": "Prepared for " + book.PREPARED_FOR,
+    doc.set_metadata({"title": title, "author": book.AUTHOR,
                       "subject": meta_subject or book.SUBTITLE, "keywords": "JEE Main 2027, 99 percentile, Physics, Chemistry, Mathematics, PYQ, mock tests, study planner",
-                      "creator": "JEE Main 99+ build system", "producer": "Chromium + PyMuPDF"})
+                      "creator": book.AUTHOR, "producer": book.AUTHOR})
     doc.set_page_labels([{"startpage": 0, "prefix": "", "style": "D", "firstpagenum": 1}])
     doc.save(dst, garbage=3, deflate=True)
     doc.close()
