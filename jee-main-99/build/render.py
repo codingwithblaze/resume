@@ -282,6 +282,8 @@ def postprocess(src, dst, chapters, pages, bookmarks, title, meta_subject, log=p
                       "subject": meta_subject or book.SUBTITLE, "keywords": "JEE Main 2027, 99 percentile, Physics, Chemistry, Mathematics, PYQ, mock tests, study planner",
                       "creator": book.AUTHOR, "producer": book.AUTHOR})
     doc.set_page_labels([{"startpage": 0, "prefix": "", "style": "D", "firstpagenum": 1}])
-    doc.save(dst, garbage=3, deflate=True)
+    doc.subset_fonts()
+    doc.save(dst, garbage=4, deflate=True, deflate_fonts=True, deflate_images=True, clean=True,
+             use_objstms=1, compression_effort=100)
     doc.close()
     log(f"  saved {os.path.basename(dst)}: {n} pages, {n_cb} checkboxes, {n_fld} text fields, {len(fixed)} bookmarks")
