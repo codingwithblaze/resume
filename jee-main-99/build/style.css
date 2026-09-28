@@ -122,6 +122,8 @@ td .math-display { margin: 0; }
 .box-practice { --c: #475569; --bg: #f1f4f8; }
 .box-mock { --c: #1e3a8a; --bg: #e9effb; }
 .box-fact { --c: #2c5282; --bg: #edf3fa; }
+.box-ref { --c: #2f6f73; --bg: #ecf5f5; }
+.box-data { --c: #6b5b3e; --bg: #f6f3ec; }
 .box-strategy { --c: #9c6b1c; --bg: #fbf4e6; }
 .box-note { --c: #4a5568; --bg: #f4f5f8; }
 .box-def { --c: #0f766e; --bg: #e9f6f4; }
@@ -352,3 +354,18 @@ a.pref { color: var(--accent); font-weight: 700; border-bottom: 0.5pt dotted cur
 .tracker th { font-size: 7.4pt; }
 .tracker td a.cb { margin: 0; }
 .ruled { background: repeating-linear-gradient(white 0, white 6.6mm, #dfe2ec 6.6mm, #dfe2ec 6.9mm); min-height: 40mm; border: 0.6pt solid var(--line); border-radius: 4pt; }
+
+.sheet .grid { gap: 5pt; margin: 3pt 0 5pt; }
+.sheet .grid .cell { padding: 5pt 7pt 3pt; }
+.sheet .cols { gap: 7pt; }
+.sheet p { margin: 0 0 3.2pt; }
+/* the one-page chapters: compact opener */
+.ch-command-sheet .ch-open, .ch-lm-physics .ch-open, .ch-lm-chemistry .ch-open, .ch-lm-reactions .ch-open, .ch-lm-maths .ch-open,
+.ch-lm-shortcuts .ch-open, .ch-lm-mistakes .ch-open, .ch-lm-strategy .ch-open { margin-bottom: 6pt; padding-bottom: 5pt; }
+.ch-command-sheet .ch-title, .ch-lm-physics .ch-title, .ch-lm-chemistry .ch-title, .ch-lm-reactions .ch-title, .ch-lm-maths .ch-title,
+.ch-lm-shortcuts .ch-title, .ch-lm-mistakes .ch-title, .ch-lm-strategy .ch-title { font-size: 19pt; }
+
+/* compact form tables (analysis sheets) */
+.dense td, .dense th { padding: 0.7pt 4pt; }
+.dense a.fld { height: 4.3mm; }
+.dense .box { margin: 5pt 0 6pt; }

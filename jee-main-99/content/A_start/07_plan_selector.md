@@ -21,7 +21,7 @@ Your plan | Read it off the tables below and print those pages
 | 14–24 | **Final 14 Days** | page [[final-14]] |
 | fewer than 14 | **Final 7 / 3 Days + Exam-Eve** | page [[final-7]] |
 
-:::fact For Gayathri, starting on 28 September 2026 (calculation)
+:::note For Gayathri, starting on 28 September 2026 (calculation)
 - **Session 1 (from 22 Jan 2027):** 116 days → **120-Day Plan**, starting from its Day 5. Days 1–4 are the diagnostic and set-up days, done in the first weekend.
 - **Session 2 (expected early April 2027, not yet announced):** about 185 days → **180-Day Plan**, with Session 1 used as a full-length "real mock" at its Day ~116.
 - Recommended: **follow the 120-Day Plan to Session 1, then the "Session 1 → Session 2 bridge"** (the last block of the 180-Day Plan) up to April.

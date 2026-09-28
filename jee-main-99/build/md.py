@@ -16,7 +16,7 @@ from markdown_it import MarkdownIt
 import graphs
 import icons
 
-_md = MarkdownIt("commonmark", {"html": True, "typographer": False}).enable(["table", "strikethrough"])
+_md = MarkdownIt("commonmark", {"html": True, "typographer": False, "breaks": True}).enable(["table", "strikethrough"])
 
 # ---------------------------------------------------------------- math protection
 _MATH_DISPLAY = re.compile(r"\$\$(.+?)\$\$", re.S)
@@ -132,6 +132,8 @@ def slugify(text: str) -> str:
 
 def plain(text: str) -> str:
     t = re.sub(r"<[^>]+>", "", text)
+    t = re.sub(r"\{\{[^}]*\}\}", "", t)  # inline tags/fields don't belong in bookmark titles
+    t = re.sub(r"[*_`]", "", t)
     return html.unescape(t).strip()
 
 
@@ -175,6 +177,8 @@ BOX_TYPES = {
     "mock": "Mock Test",
     "warning": "Warning",
     "fact": "Verified Fact",
+    "ref": "Reference",
+    "data": "Third-Party Data",
     "strategy": "Strategy",
     "note": "Note",
     "def": "Definition",
@@ -259,7 +263,7 @@ def parse_question(header: str, lines: list[str]) -> Question:
             options[-1] = (letter, txt + " " + line.strip())
         else:
             q_lines.append(line)
-    tag_list = [t.strip() for t in tags.split(",") if t.strip()]
+    tag_list = [t.strip() for t in re.split(r"[,·]", tags) if t.strip()]
     return Question(qid=qid, diff=diff or "M", time=time, concept=concept, tags=tag_list,
                     text="\n".join(q_lines).strip(), options=options,
                     ans="\n".join(fields["ans"]).strip(), sol="\n".join(fields["sol"]).strip(),
@@ -330,6 +334,13 @@ def _meta_pills(q: Question) -> str:
     return "".join(pills)
 
 
+def _question_pills(q: Question) -> str:
+    # Mock papers show no difficulty/time/topic hints, only the NV marker.
+    if q.set_name.startswith("Mock"):
+        return '<span class="pill pill-nv">NV</span>' if any(t.upper() == "NV" for t in q.tags) else ""
+    return _meta_pills(q)
+
+
 def render_question(q: Question, ctx: Ctx) -> str:
     opts = ""
     if q.options:
@@ -339,7 +350,7 @@ def render_question(q: Question, ctx: Ctx) -> str:
     else:
         opts = '<div class="q-nvline">Your answer (numerical value): <span class="nvbox"></span></div>'
     return (f'<div class="q" id="q-{q.qid}"><div class="q-head"><span class="q-num">{q.number}</span>'
-            f'<span class="q-meta">{_meta_pills(q)}</span><span class="q-id">{html.escape(q.qid)}</span></div>'
+            f'<span class="q-meta">{_question_pills(q)}</span><span class="q-id">{html.escape(q.qid)}</span></div>'
             f'<div class="q-text">{md_chunk(q.text, ctx)}</div>{opts}</div>')
 
 

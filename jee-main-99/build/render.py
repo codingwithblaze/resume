@@ -23,7 +23,7 @@ def _css_str(s: str) -> str:
     return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
-def page_rules(chapters, doc_label) -> str:
+def page_rules(chapters, doc_label, tabs_list=None) -> str:
     rules = []
     base = (
         "@top-left { content: %s; font-family: Inter, sans-serif; font-size: 6.4pt; font-weight: 800; letter-spacing: 0.16em; color: #767b93; vertical-align: bottom; padding-bottom: 6.8mm; }"
@@ -32,7 +32,7 @@ def page_rules(chapters, doc_label) -> str:
         "@bottom-center { content: %s; font-family: Inter, sans-serif; font-size: 5.9pt; font-weight: 800; letter-spacing: 0.12em; color: #8a8fa6; vertical-align: top; padding-top: 5.2mm; white-space: pre; }"
         "@bottom-right { content: counter(page); font-family: Inter, sans-serif; font-size: 8.5pt; font-weight: 800; color: %s; vertical-align: top; padding-top: 4.6mm; }"
     )
-    tabs = "   ".join(t for t, _ in book.TABS)
+    tabs = "   ".join(t for t, _ in (book.TABS if tabs_list is None else tabs_list))
     for ch in chapters:
         colour = book.SUBJECT_COLOURS.get(ch.subject, "#3b2e7e")
         left = f"{book.TITLE}   ·   {doc_label}"
@@ -108,23 +108,26 @@ window.addEventListener('load', function () {
 """
 
 
-def assemble_html(body: str, chapters, doc_label: str, title: str) -> str:
+def assemble_html(body: str, chapters, doc_label: str, title: str, tabs_list=None) -> str:
     a = f"file://{BUILD}/assets"
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{html.escape(title)}</title>'
             f'<base href="file://{BUILD}/">'
             f'<link rel="stylesheet" href="{a}/katex/katex.min.css"><link rel="stylesheet" href="file://{BUILD}/style.css">'
-            f'<style>{page_rules(chapters, doc_label)}</style>'
+            f'<style>{page_rules(chapters, doc_label, tabs_list)}</style>'
             f'<script src="{a}/katex/katex.min.js"></script><script src="{a}/katex/mhchem.min.js"></script>{KATEX_JS}'
             f'</head><body>{body}</body></html>')
 
 
-def fill_page_numbers(html_str: str, pages: dict) -> tuple[str, list]:
+def fill_page_numbers(html_str: str, pages: dict, fallback: dict | None = None) -> tuple[str, list]:
+    """Fill page refs; refs to chapters outside this document point to the Master Book ("MB 123")."""
     missing = []
 
     def rep(m):
         rid = m.group(1)
         if rid in pages:
             return f'data-ref="{rid}">{pages[rid]}<'
+        if fallback and rid in fallback:
+            return f'data-ref="{rid}">MB {fallback[rid]}<'
         missing.append(rid)
         return f'data-ref="{rid}">?<'
 
@@ -171,15 +174,16 @@ def probe_map(pdf_path: str) -> dict:
     return pages
 
 
-def render_doc(body: str, chapters, doc_label: str, title: str, out_pdf: str, bookmarks, log=print, meta_subject=""):
+def render_doc(body: str, chapters, doc_label: str, title: str, out_pdf: str, bookmarks, log=print, meta_subject="",
+               tabs_list=None, fallback=None):
     os.makedirs(os.path.join(ROOT, "work"), exist_ok=True)
     stem = os.path.splitext(os.path.basename(out_pdf))[0]
     html_path = os.path.join(ROOT, "work", stem + ".html")
     tmp_pdf = os.path.join(ROOT, "work", stem + ".raw.pdf")
-    doc_html = assemble_html(body, chapters, doc_label, title)
+    doc_html = assemble_html(body, chapters, doc_label, title, tabs_list)
     pages = {}
     for it in range(4):
-        filled, missing = fill_page_numbers(doc_html, {k: v[0] + 1 for k, v in pages.items()})
+        filled, missing = fill_page_numbers(doc_html, {k: v[0] + 1 for k, v in pages.items()}, fallback)
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(filled)
         t0 = time.time()
@@ -193,12 +197,12 @@ def render_doc(body: str, chapters, doc_label: str, title: str, out_pdf: str, bo
             break
     if missing:
         log(f"  unresolved page refs: {sorted(set(missing))[:30]}")
-    postprocess(tmp_pdf, out_pdf, chapters, pages, bookmarks, title, meta_subject, log)
+    postprocess(tmp_pdf, out_pdf, chapters, pages, bookmarks, title, meta_subject, log, tabs_list)
     return pages
 
 
 # ---------------------------------------------------------------- post-processing
-def postprocess(src, dst, chapters, pages, bookmarks, title, meta_subject, log=print):
+def postprocess(src, dst, chapters, pages, bookmarks, title, meta_subject, log=print, tabs_list=None):
     doc = pymupdf.open(src)
     n = len(doc)
     full_pages = {v[0] for k, v in pages.items() if k.startswith("full-")}
@@ -212,7 +216,7 @@ def postprocess(src, dst, chapters, pages, bookmarks, title, meta_subject, log=p
             cur = starts[si][1]
             si += 1
         colour_of[i] = book.SUBJECT_COLOURS.get(cur.subject, "#3b2e7e") if cur else "#3b2e7e"
-    tab_targets = {label: pages[t][0] for label, t in book.TABS if t in pages}
+    tab_targets = {label: pages[t][0] for label, t in (book.TABS if tabs_list is None else tabs_list) if t in pages}
     n_cb = n_fld = 0
     for i, page in enumerate(doc):
         W, H = page.rect.width, page.rect.height

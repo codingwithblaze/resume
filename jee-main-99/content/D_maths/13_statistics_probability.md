@@ -14,7 +14,7 @@ Study time | ~12 hours
 - **Probability:** events and their probabilities, the addition and multiplication theorems, conditional probability, **total probability and Bayes' theorem**, and random variables with their distributions (mean and variance).
 
 :::note Syllabus note
-The official Unit 13 text lists measures of dispersion (mean, median, mode, SD, variance, mean deviation), probability of an event, the addition and multiplication theorems, Bayes' theorem and the probability distribution of a random variate [NTA-SYL]. Check the current PDF for Bernoulli trials and the binomial distribution. The two binomial formulas are included below as a cheap tool either way {{tag:rec}}.
+The official Unit 13 text lists measures of dispersion (mean, median, mode, SD, variance, mean deviation), probability of an event, the addition and multiplication theorems, Bayes' theorem and the probability distribution of a random variate [NTA-SYL]. Bernoulli trials and the binomial distribution were removed in the 2024 revision [T-DELETED]. The two binomial formulas below are kept only as a quick tool for random-variable questions {{tag:rec}}.
 :::
 
 ## Important formulas: statistics

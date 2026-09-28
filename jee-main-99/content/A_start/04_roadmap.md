@@ -26,7 +26,7 @@ Phase 4 · Peak | Final 14 days: revision-heavy, mocks in the exam time slot, sl
 
 ## What score has 99 percentile needed? (historical, approximate)
 
-:::fact Third-party analyses of past results, labelled approximate
+:::data Third-party analyses of past results, labelled approximate
 Marks needed for about the 99th percentile varied widely **by shift**. Ranges compiled from published shift-wise marks-vs-percentile analyses:
 
 | Session | Approx. raw marks for ~99 percentile (toughest → easiest shift) | Sources |

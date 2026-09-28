@@ -97,6 +97,8 @@ When an NV asks for $d^2$ or $6d^2$, keep everything squared: $d^2 = \dfrac{[(\v
 - Reading the direction from the wrong form: in $\dfrac{2x - 1}{3} = \dots$, the $x$-DR is $\dfrac32$, not 3. First rewrite as $\dfrac{x - 1/2}{3/2}$.
 :::
 
+## Insurance topic: planes
+
 :::important Plane insurance (2 hours, not in the official text) {{tag:rec}}
 | Result | Formula |
 |---|---|
